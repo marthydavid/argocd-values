@@ -8,29 +8,58 @@
   },
   "packageRules": [
     {
-      "matchManagers": [
+      "managers": [
         "argocd",
         "helm-values"
       ],
+      "commitMessagePrefix": "{{baseDir}} ",
+      "additionalBranchPrefix": "{{baseDir}}-",
       "matchPaths": [
         "dev/**",
         "staging/**"
       ]
     },
     {
-      "matchManagers": [
+      "managers": [
         "argocd",
         "helm-values"
       ],
+      "commitMessagePrefix": "rke2-dev {{baseDir}} ",
+      "additionalBranchPrefix": "{{baseDir}}-",
       "matchPaths": [
-        "preprod/**"
+        "**rke2-dev**"
       ]
     },
     {
-      "matchManagers": [
+      "managers": [
         "argocd",
         "helm-values"
       ],
+      "commitMessagePrefix": "{{baseDir}} ",
+      "additionalBranchPrefix": "{{baseDir}}-",
+      "matchPaths": [
+        "preprod/**",
+        "**rke2-preprod**"
+      ]
+    },
+    {
+      "managers": [
+        "argocd",
+        "helm-values"
+      ],
+      "commitMessagePrefix": "preprod ",
+      "additionalBranchPrefix": "{{baseDir}}-",
+      "matchPaths": [
+        "**rke2-preprod**"
+      ]
+    },
+    {
+      "managers": [
+        "argocd",
+        "helm-values"
+      ],
+      "commitMessagePrefix": "{{baseDir}} ",
+      "additionalBranchPrefix": "{{baseDir}}-",
       "matchPaths": [
         "prod/**"
       ]

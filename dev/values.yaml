@@ -1,4 +1,4 @@
-controller:
-  image:
-    image: ghcr.io/marthydavid/kafka-keda-golang-consumer
-    tag: 0.0.1
+image:
+  registry: quay.io
+  repository: prometheus/prometheus
+  tag: v2.45.5
