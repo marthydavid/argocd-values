@@ -1,0 +1,33 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "matchManagers": [
+        "argocd",
+        "helm-values"
+      ],
+      "matchPaths": [
+        "dev/**",
+        "staging/**"
+      ]
+    },
+    {
+      "matchManagers": [
+        "argocd",
+        "helm-values"
+      ],
+      "matchPaths": [
+        "preprod/**"
+      ]
+    },
+    {
+      "matchManagers": [
+        "argocd",
+        "helm-values"
+      ],
+      "matchPaths": [
+        "prod/**"
+      ]
+    }
+  ]
+}
