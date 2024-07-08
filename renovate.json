@@ -8,32 +8,60 @@
   },
   "packageRules": [
     {
-      "matchManagers": [
+      "managers": [
         "argocd",
         "helm-values"
       ],
+      "commitMessagePrefix": "{{baseDir}} ",
+      "additionalBranchPrefix": "{{baseDir}}-",
       "matchPaths": [
         "dev/**",
         "staging/**"
       ]
     },
     {
-      "matchManagers": [
+      "managers": [
         "argocd",
         "helm-values"
       ],
+      "commitMessagePrefix": "rke2-dev",
+      "matchFileNames": [
+        "rke2-dev-values.yaml"
+      ],
+      "groupName": "RKE2-DEV"
+    },
+    {
+      "managers": [
+        "argocd",
+        "helm-values"
+      ],
+      "commitMessagePrefix": "{{baseDir}} ",
+      "additionalBranchPrefix": "{{baseDir}}-",
       "matchPaths": [
         "preprod/**"
       ]
     },
     {
-      "matchManagers": [
+      "managers": [
         "argocd",
         "helm-values"
       ],
-      "matchPaths": [
-        "prod/**"
-      ]
+      "commitMessagePrefix": "rke2-preprod",
+      "matchFileNames": [
+        "rke2-preprod-values.yaml"
+      ],
+      "groupName": "RK2E-PREPROD"
+    },
+    {
+      "managers": [
+        "argocd",
+        "helm-values"
+      ],
+      "commitMessagePrefix": "rke2-prod",
+      "matchFileNames": [
+        "rke2-prod-values.yaml"
+      ],
+      "groupName": "RKE2-PROD"
     }
   ]
 }
