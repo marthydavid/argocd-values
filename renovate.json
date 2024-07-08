@@ -1,5 +1,11 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "helm-values": {
+    "fileMatch": [
+      "(^|/).*-values\\.yaml$",
+      "(^|/).*\\.yaml$"
+    ]
+  },
   "packageRules": [
     {
       "matchManagers": [

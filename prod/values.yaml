@@ -1,4 +1,4 @@
 controller:
   image:
-    image: ghcr.io/marthydavid/kafka-keda-golang-consumer:main
-    tag: "0.0.1"
+    image: ghcr.io/marthydavid/kafka-keda-golang-consumer
+    tag: 0.0.1
