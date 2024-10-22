@@ -1,4 +1,4 @@
 image:
   registry: quay.io
   repository: prometheus/prometheus
-  tag: v2.45.5
+  tag: v2.55.0
